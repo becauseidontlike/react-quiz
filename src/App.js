@@ -1,7 +1,10 @@
 import "./App.css";
+import DateCounter from "./DateCounter";
 
-function App() {
-  return <div className="App"></div>;
+export default function App() {
+  return (
+    <div className="">
+      <DateCounter />
+    </div>
+  );
 }
-
-export default App;
