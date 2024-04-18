@@ -1,4 +1,4 @@
-function Finished({ points, maxPossiblePoints }) {
+function Finished({ points, maxPossiblePoints, highscore }) {
   const percentage = (points / maxPossiblePoints) * 100;
 
   let emoji;
@@ -8,10 +8,13 @@ function Finished({ points, maxPossiblePoints }) {
   if (percentage < 50) emoji = "😐";
 
   return (
-    <p className="result">
-      You scored <strong>{points}</strong> out of {maxPossiblePoints} (
-      {Math.ceil(percentage)}%) <span>{emoji}</span>
-    </p>
+    <>
+      <p className="result">
+        You scored <strong>{points}</strong> out of {maxPossiblePoints} (
+        {Math.ceil(percentage)}%) <span>{emoji}</span>
+      </p>
+      <p className="highscore">(Highscore: {highscore} points)</p>
+    </>
   );
 }
 
